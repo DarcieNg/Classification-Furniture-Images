@@ -2,14 +2,11 @@
 
 # 🛋️ Furniture Image Classification
 
-![Project Banner](https://via.placeholder.com/1200x400?text=Furniture+Image+Classification+Project)
+
 
 This repository contains the code and resources for **Furniture Image Classification**, a machine learning project that classifies furniture images into categories and recommends similar items based on user-uploaded images.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/furniture-image-classification)
-![GitHub contributors](https://img.shields.io/github/contributors/your-username/furniture-image-classification)
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/furniture-image-classification)
-![License](https://img.shields.io/github/license/your-username/furniture-image-classification)
+
 
 ---
 
@@ -33,9 +30,6 @@ This repository contains the code and resources for **Furniture Image Classifica
 
 The goal of this project is to build a **Furniture Recommendation System** that utilizes deep learning to classify furniture images and suggest similar items. Users upload furniture images, and the system provides category-based recommendations using advanced image processing techniques.
 
-<p align="center">
-    <img src="https://via.placeholder.com/600x300?text=Model+Architecture" alt="Model Architecture" />
-</p>
 
 ## 🛠️ Project Tasks
 
@@ -55,9 +49,7 @@ Classify images into six furniture categories (e.g., tables, chairs). Models suc
 
 This task focuses on identifying 10 similar images to a given input using **ResNet50** and the **NearestNeighbors** algorithm.
 
-<p align="center">
-    <img src="https://via.placeholder.com/600x300?text=Feature+Extraction+Process" alt="Feature Extraction" />
-</p>
+
 
 ### Task 3: Finding Similar Furniture by Category and Style
 
@@ -83,9 +75,7 @@ The dataset includes **90,000+ images** categorized into 6 types of furniture an
 2. **ResNet50**: Employed for both feature extraction and classification in all tasks.
 3. **InceptionV3**: Provided the best accuracy for the image classification task.
 
-<p align="center">
-    <img src="https://via.placeholder.com/600x300?text=ResNet50+Model+Architecture" alt="ResNet50 Architecture" />
-</p>
+
 
 ---
 
@@ -121,9 +111,7 @@ To run the project locally:
 - **InceptionV3** achieved the highest accuracy of **96.63%** in Task 1.
 - **NearestNeighbors** produced reliable results for similarity matching in Task 2.
   
-<p align="center">
-    <img src="https://via.placeholder.com/600x300?text=Example+Results+Screenshot" alt="Example Results" />
-</p>
+
 
 ---
 
