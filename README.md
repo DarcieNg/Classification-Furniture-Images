@@ -1,57 +1,95 @@
 
-# Furniture Image Classification
 
-This repository contains the code and resources for **Furniture Image Classification**, a machine learning project that aims to classify images of furniture into various categories and recommend similar items based on user-uploaded images.
+# 🛋️ Furniture Image Classification
 
-## Project Overview
+![Project Banner](https://via.placeholder.com/1200x400?text=Furniture+Image+Classification+Project)
 
-The main goal of this project is to build a **Furniture Recommendation System** that classifies images into furniture categories and suggests similar items. The system uses **deep learning** techniques, including **Convolutional Neural Networks (CNNs)** and **ResNet50**, to accurately categorize and recommend furniture styles and types.
+This repository contains the code and resources for **Furniture Image Classification**, a machine learning project that classifies furniture images into categories and recommends similar items based on user-uploaded images.
 
-## Team Members
+![GitHub repo size](https://img.shields.io/github/repo-size/your-username/furniture-image-classification)
+![GitHub contributors](https://img.shields.io/github/contributors/your-username/furniture-image-classification)
+![GitHub last commit](https://img.shields.io/github/last-commit/your-username/furniture-image-classification)
+![License](https://img.shields.io/github/license/your-username/furniture-image-classification)
 
-- Shirin Shujaa - S3983427
-- Nguyen Vu Thuy Duong - S3865443
-- Huynh Quang Dong - S3938006
-- Nguyen Bao Minh - S3926080
-- Tran Viet Hoang - S3928141
+---
 
-## Project Tasks
+## 📜 Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Tasks](#project-tasks)
+    - [Task 1: Category Classification](#task-1-furniture-category-classification)
+    - [Task 2: Similar Furniture by Category](#task-2-finding-similar-furniture-by-category)
+    - [Task 3: Similar Furniture by Category & Style](#task-3-finding-similar-furniture-by-category-and-style)
+3. [Datasets](#datasets)
+4. [Models Used](#models-used)
+5. [How to Run the Project](#running-the-project)
+6. [Results](#results)
+7. [Contributors](#team-members)
+
+
+---
+
+## 🌟 Project Overview
+
+The goal of this project is to build a **Furniture Recommendation System** that utilizes deep learning to classify furniture images and suggest similar items. Users upload furniture images, and the system provides category-based recommendations using advanced image processing techniques.
+
+<p align="center">
+    <img src="https://via.placeholder.com/600x300?text=Model+Architecture" alt="Model Architecture" />
+</p>
+
+## 🛠️ Project Tasks
 
 ### Task 1: Furniture Category Classification
-This task involves classifying images into six furniture categories (e.g., tables, chairs, etc.) using models like **CNN**, **ResNet50**, and **InceptionV3**. After model evaluation, **InceptionV3** was selected as the final model due to its superior accuracy.
+
+Classify images into six furniture categories (e.g., tables, chairs). Models such as **CNN**, **ResNet50**, and **InceptionV3** were used, with **InceptionV3** chosen for its superior accuracy.
+
+| Model       | Train Accuracy | Validation Accuracy |
+|-------------|----------------|---------------------|
+| CNN         | 71.52%         | 71.56%              |
+| ResNet50    | 93.09%         | 90.52%              |
+| **InceptionV3** | **97.46%**  | **96.63%**          |
+
+![Task 1 Results](https://via.placeholder.com/800x400?text=Model+Performance+Graph)
 
 ### Task 2: Finding Similar Furniture by Category
-Using the **ResNet50** model for feature extraction, this task identifies 10 similar images to an input based on category. The **NearestNeighbors** algorithm achieved the best performance in this task.
+
+This task focuses on identifying 10 similar images to a given input using **ResNet50** and the **NearestNeighbors** algorithm.
+
+<p align="center">
+    <img src="https://via.placeholder.com/600x300?text=Feature+Extraction+Process" alt="Feature Extraction" />
+</p>
 
 ### Task 3: Finding Similar Furniture by Category and Style
-Building upon the category classification from Task 1, this task further refines the recommendation to find similar images by both category and style using **ResNet50** and separate models for each furniture category.
 
-## Datasets
+Further refines the similarity search by incorporating both category and style information. **ResNet50** continues to be the main architecture used.
 
-The dataset used consists of over **90,000 images** divided into 6 categories and 11 interior styles. The data underwent extensive preprocessing, including duplicate removal and resizing to support model inputs.
+---
 
-### Data Preprocessing
-- **Duplicate Removal**: Eliminated duplicate images to maintain dataset integrity.
-- **Resizing**: Adjusted image sizes to fit the model requirements.
-- **Imbalance Handling**: Applied oversampling techniques to manage class imbalances.
+## 🗂️ Datasets
 
-Filtered datasets are stored in:
-- `categorial_filter_df.csv`
-- `style_filter_df.csv`
+The dataset includes **90,000+ images** categorized into 6 types of furniture and 11 interior styles. Preprocessing involved duplicate removal and resizing to fit model inputs.
 
-## Models Used
+| Category  | Percentage |
+|-----------|------------|
+| Lamps     | 36%        |
+| Chairs    | 25%        |
+| Tables    | 20%        |
 
-1. **Convolutional Neural Networks (CNN)**: Used as a baseline model with 6 layers, including convolutional and max pooling layers.
-2. **ResNet50**: A 50-layer CNN used for tasks involving feature extraction and similarity matching.
-3. **InceptionV3**: The selected model for Task 1 due to its high accuracy and ability to handle large datasets.
+---
 
-## Key Libraries and Tools
+## 🧠 Models Used
 
-- **TensorFlow / Keras**: Used for model implementation.
-- **scikit-learn**: Used for applying feature extraction and nearest neighbor algorithms.
-- **Pillow & os**: For image processing and duplicate removal.
+1. **Convolutional Neural Networks (CNN)**: Used as a baseline for image classification.
+2. **ResNet50**: Employed for both feature extraction and classification in all tasks.
+3. **InceptionV3**: Provided the best accuracy for the image classification task.
 
-## Running the Project
+<p align="center">
+    <img src="https://via.placeholder.com/600x300?text=ResNet50+Model+Architecture" alt="ResNet50 Architecture" />
+</p>
+
+---
+
+## 🚀 Running the Project
 
 To run the project locally:
 
@@ -66,19 +104,34 @@ To run the project locally:
    pip install -r requirements.txt
    ```
 
-3. Run the model training and evaluation scripts:
+3. Train and evaluate the model:
    ```bash
    python train_model.py
    ```
 
-4. To test the recommendation system, use the `recommend.py` script:
+4. Test the recommendation system:
    ```bash
    python recommend.py --input your_image.jpg
    ```
 
-## Results
+---
 
-- **InceptionV3** achieved the highest validation accuracy of **96.63%** for Task 1.
-- The **NearestNeighbors** algorithm produced the most reliable similarity results in Task 2.
+## 📊 Results
 
+- **InceptionV3** achieved the highest accuracy of **96.63%** in Task 1.
+- **NearestNeighbors** produced reliable results for similarity matching in Task 2.
+  
+<p align="center">
+    <img src="https://via.placeholder.com/600x300?text=Example+Results+Screenshot" alt="Example Results" />
+</p>
+
+---
+
+## 👥 Team Members
+
+- **Shirin Shujaa** – S3983427
+- **Nguyen Vu Thuy Duong** – S3865443
+- **Huynh Quang Dong** – S3938006
+- **Nguyen Bao Minh** – S3926080
+- **Tran Viet Hoang** – S3928141
 
