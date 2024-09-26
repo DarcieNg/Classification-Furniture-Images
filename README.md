@@ -43,7 +43,7 @@ Classify images into six furniture categories (e.g., tables, chairs). Models suc
 | ResNet50    | 93.09%         | 90.52%              |
 | **InceptionV3** | **97.46%**  | **96.63%**          |
 
-![Task 1 Results](https://via.placeholder.com/800x400?text=Model+Performance+Graph)
+
 
 ### Task 2: Finding Similar Furniture by Category
 
